@@ -1,5 +1,9 @@
 # docker-image-go-ci
 
+[![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/docker-image-go-ci.svg)](https://github.com/suzuki-shunsuke/docker-image-go-ci)
+[![GitHub tag](https://img.shields.io/github/tag/suzuki-shunsuke/docker-image-go-ci.svg)](https://github.com/suzuki-shunsuke/docker-image-go-ci/releases)
+[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/docker-image-go-ci/master/LICENSE)
+
 Docker Image for Golang Project's CI
 
 https://hub.docker.com/r/suzukishunsuke/go-ci/
