@@ -1,10 +1,3 @@
-# node
-# npm
-# gometalinter
-# bash
-# dep
-# dep-dl https://github.com/take-cheeze/dep-dl
-# golang
 FROM node:8.11.3-stretch AS build-env
 FROM golang:1.10.3
 COPY --from=build-env /usr/local/bin/node /usr/local/bin/
@@ -20,6 +13,6 @@ RUN go get -u gopkg.in/alecthomas/gometalinter.v2 && \
     wget https://github.com/tcnksm/ghr/releases/download/$GHR_VERSION/ghr_${GHR_VERSION}_linux_amd64.tar.gz && \
     tar xvzf ghr_${GHR_VERSION}_linux_amd64.tar.gz && \
     mv ghr_${GHR_VERSION}_linux_amd64/ghr /usr/local/bin && \
-    rm -R ghr_${GHR_VERSION}_linux_amd64 && \
+    rm -R ghr_${GHR_VERSION}_linux_amd64.tar.gz ghr_${GHR_VERSION}_linux_amd64 && \
     go get github.com/mitchellh/gox && \
     go get -u github.com/take-cheeze/dep-dl
