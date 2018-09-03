@@ -1,8 +1,8 @@
-FROM node:8.11.3-stretch AS build-env
-FROM golang:1.10.3
+FROM node:8.11.4-stretch AS build-env
+FROM golang:1.11.0
 COPY --from=build-env /usr/local/bin/node /usr/local/bin/
 COPY --from=build-env /usr/local/lib/node_modules/ /usr/local/lib/node_modules/
-ARG GHR_VERSION=v0.10.2
+ARG GHR_VERSION=v0.12.0
 RUN go get -u gopkg.in/alecthomas/gometalinter.v2 && \
     ln -s $GOPATH/bin/gometalinter.v2 $GOPATH/bin/gometalinter && \
     gometalinter --install && \
