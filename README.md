@@ -13,10 +13,10 @@ https://hub.docker.com/r/suzukishunsuke/go-ci/
 * [dep](https://github.com/golang/dep)
 * [dep-dl](https://github.com/take-cheeze/dep-dl) https://github.com/golang/dep/issues/289#issuecomment-385968184
 * [gometalinter](https://github.com/alecthomas/gometalinter)
-* [ghr v0.10.2](https://github.com/tcnksm/ghr)
+* [ghr v0.12.0](https://github.com/tcnksm/ghr)
 * [gox](https://github.com/mitchellh/gox)
-* Node.js 8.11.4
-* npm 5.6.0
+* Node.js 8.12.0
+* npm 6.4.1
 
 ## License
 
