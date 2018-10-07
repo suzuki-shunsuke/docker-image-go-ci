@@ -9,7 +9,7 @@ Docker Image for Golang Project's CI
 https://hub.docker.com/r/suzukishunsuke/go-ci/
 
 * Debian Stretch
-* Golang 1.11.0
+* Golang 1.11.1
 * [dep](https://github.com/golang/dep)
 * [dep-dl](https://github.com/take-cheeze/dep-dl) https://github.com/golang/dep/issues/289#issuecomment-385968184
 * [gometalinter](https://github.com/alecthomas/gometalinter)
