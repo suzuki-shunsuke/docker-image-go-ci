@@ -14,6 +14,7 @@ https://hub.docker.com/r/suzukishunsuke/go-ci/
 * [dep-dl](https://github.com/take-cheeze/dep-dl) https://github.com/golang/dep/issues/289#issuecomment-385968184
 * [gometalinter](https://github.com/alecthomas/gometalinter)
 * [ghr v0.12.0](https://github.com/tcnksm/ghr)
+* [goreleaser v0.88.0](https://goreleaser.com/)
 * [gox](https://github.com/mitchellh/gox)
 * Node.js 8.12.0
 * npm 6.4.1
