@@ -1,13 +1,13 @@
 # node
-FROM node:10.14.1-stretch AS build-env
+FROM node:10.15.1-stretch AS build-env
 
-FROM golang:1.11.2 AS go-build-env
+FROM golang:1.11.5 AS go-build-env
 # ghr
 ARG GHR_VERSION=v0.12.0
 RUN wget https://github.com/tcnksm/ghr/releases/download/$GHR_VERSION/ghr_${GHR_VERSION}_linux_amd64.tar.gz
 RUN tar xvzf ghr_${GHR_VERSION}_linux_amd64.tar.gz
 # goreleaser
-ARG GORELEASER_VERSION=v0.94.0
+ARG GORELEASER_VERSION=v0.99.0
 RUN wget https://github.com/goreleaser/goreleaser/releases/download/${GORELEASER_VERSION}/goreleaser_Linux_x86_64.tar.gz
 RUN tar xvzf goreleaser_Linux_x86_64.tar.gz
 # gometalinter
@@ -20,13 +20,12 @@ RUN go get -u github.com/take-cheeze/dep-dl
 RUN curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 RUN ls /go/bin
 # durl
-ARG DURL_VERSION=0.1.0-1
+ARG DURL_VERSION=0.1.1
 RUN wget https://github.com/suzuki-shunsuke/durl/releases/download/v${DURL_VERSION}/durl_${DURL_VERSION}_linux_amd64.tar.gz
 RUN tar xvzf durl_${DURL_VERSION}_linux_amd64.tar.gz
 
-FROM golang:1.11.2
+FROM golang:1.11.5
 ARG GHR_VERSION=v0.12.0
-ARG GORELEASER_VERSION=v0.94.0
 COPY --from=build-env /usr/local/bin/node /usr/local/bin/
 COPY --from=build-env /usr/local/lib/node_modules/ /usr/local/lib/node_modules/
 COPY --from=go-build-env /go/bin/* /go/ghr_${GHR_VERSION}_linux_amd64/ghr /go/goreleaser /go/durl /usr/local/bin/
